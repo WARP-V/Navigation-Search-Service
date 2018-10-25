@@ -37,4 +37,5 @@ npm install -g webpack
 npm install
 ```
 [] seed data functionality
+[] run npm run db:setup
 

@@ -1,0 +1,114 @@
+.toolbar{
+	position: fixed;
+	width: 100%;
+	background: lightgrey;
+	top: 0;
+	left: 0;
+	height: 50px;
+}
+
+.toolbar_navigation {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	padding: 0;
+}
+
+.toolbar_logo a {
+	colot: white;
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+
+.navigation_tooolbar_items {
+	color: lightgrey;
+	text-decoration: none;
+}
+
+.navigation_tooolbar_items ul{
+	color: lightgrey;
+	text-decoration: none;
+}
+
+.navigation_toolbar_items a:hover 
+.navigation_toolbar_items a:active {
+	color: black;
+}
+
+.font_family {
+	font-style: normal;
+	font-weight: 400;
+	font-family: Helvetica, Arial, sans-serif;
+
+}
+/*nav {
+	background-color: grey;
+	overflow: hidden;
+	padding: 1em;
+
+	a {
+		color: #FFF;
+	}
+
+	a:visited {
+		color: #FFF;
+	}
+
+	border-bottom: 1px solid #000;
+
+	.navWide {
+		display: none;
+		margin: 0 auto;
+
+		.wideDiv {
+			text-align: center;
+
+			a {
+				text-decoration: none;
+				display: inline-block;
+				// Adjust padding to increase/decrease the space between links.
+				padding: 0 2em;
+			}
+		}
+	}
+
+	// Navbar is set to default with the "hamburger" and links on the left
+	// side of the screen. To move to the right of the screen, simply
+	// change the three "float: Left;" references to read "float: right;".
+	.navNarrow {
+
+		i {
+			float: left;
+			cursor: pointer;
+			color: #FFF;
+		}
+
+		.narrowLinks {
+			display: none;
+
+			a {
+				text-decoration: none;
+				display: block;
+				float: left;
+				clear: left;
+				padding: 0.5em 0;
+			}
+		}
+	}
+}*/
+
+// Adjust breakpoint as desired to select when the "hamburger" menu is
+// replaced by just the links.
+@media (min-width: 480px) {
+	
+	nav {
+
+		.navWide {
+			display: block;
+		}
+
+		.navNarrow {
+			display: none;
+		}
+	}
+}

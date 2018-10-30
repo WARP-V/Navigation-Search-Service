@@ -11,6 +11,7 @@
   "scripts": {
     "start": "nodemon server/server.js",
     "dev:react": "webpack -d --watch",
+    "test": "jest database-mongodb/__test__/database-insert.test.js",
     "eslnt": "eslint --ignore-path .gitignore . --fix",
     "db:setup": "node database-mongodb/seed.js"
   },
@@ -38,6 +39,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
     "webpack": "^2.2.1"
   }
 }

@@ -19,4 +19,25 @@ const shoeGroupSchema = new mongoose.Schema({
 const ShoeGroup = mongoose.model('ShoeGroup', shoeGroupSchema);
 
 
-module.exports = ShoeGroup;
+const retrieveShoe = (shoeID, callback) => {
+  ShoeGroup.find({ shoeID }, (error, docs) => {
+    if (error) {
+      callback(error, null);
+    } else {
+      callback(null, docs);
+    }
+  });
+};
+
+const retrieveAllShoeGroups = (callback) => {
+  ShoeGroup.find((error, docs) => {
+    if (error) {
+      return callback(error, null);
+    } 
+    return callback(null, docs);
+  });
+};
+
+module.exports.ShoeGroup = ShoeGroup;
+module.exports.retrieveShoe = retrieveShoe;
+module.exports.retrieveAllShoeGroups = retrieveAllShoeGroups;

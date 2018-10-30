@@ -1,6 +1,12 @@
 const db = require('./index.js');
 const ShoeGroup = require('./ShoeGroup.js');
 
+/* Connect to the DB */
+mongoose.connect('mongodb://localhost/shoegroups',function(){
+    /* Drop the DB */
+    mongoose.connection.db.dropDatabase();
+});
+
 const shoeIDs = ['310805-408', '310806-408', '310806-002', '305381-113', '852542-306', '554724-062', '554724-113', '554724-071', '554724-610', '554724-050',
   '554724-109', 'AR4491-001', 'AR4491-700', 'AV3922-601', 'AV3922-348', 'AV3922-001', 'AT3146-001', 'AV1200-600', 'AV1200-007', 'AV1200-008',
   'AV1200-401', 'AV1200-100', 'AV1200-200', 'AV1200-001', '315371-006', '315371-300', '310805-160', '136027-148', 'AV7008-700', 'AV7007-001',
@@ -18,6 +24,10 @@ const shoeIDs = ['310805-408', '310806-408', '310806-002', '305381-113', '852542
 
 
 const names = [ 
+  'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10',
+  'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10',
+  'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10',
+  'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10',
   'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10'
 ];
 

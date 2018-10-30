@@ -6,7 +6,7 @@ test('jest is working', () => {
 });
 
 describe('methods for the Shoe Group components', () => {
-  it('insdert method - should insert a document(row) into collection (table)', async () => {
+  test('insdert method - should insert a document(row) into collection (table)', async () => {
     const mockShoe = {shoeID: '555555-555', name: 'mockShoe', imageUrls: 'https://s3.amazonaws.com/warp-v/images/136027_148.jpeg', productGroup: 'Air Jordan Mid', searchStr: 'Air Jordan', price: '$555'};
     ShoeGroup.ShoeGroup.create(mockShoe);
     // const insertedShoe = ShoeGroup.findOne({shoeID: '555555-555'});

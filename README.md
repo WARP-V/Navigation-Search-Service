@@ -37,5 +37,5 @@ npm install -g webpack
 npm install
 ```
 [] seed data functionality
-[] run npm run db:setup
-
+[] run-> npm run db:setup
+[] npm install --save-dev jest //installing jest

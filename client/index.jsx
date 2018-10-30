@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import Toolbar from './components/Toolbar.jsx'
 
 class App extends React.Component {
   constructor() {
@@ -13,14 +14,11 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div className="nav">
-          <span className="logo">
-            SEARCH
-          </span>
-      	</div>
+        <Toolbar />
       </div>
     );
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('navSearch'));
+
+ReactDOM.render(<App />, document.getElementById('navbar'));

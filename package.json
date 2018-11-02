@@ -8,24 +8,35 @@
   "engines": {
     "node": ">=6.13.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WARP-V/main_photo_gallery.git"
+  },
   "scripts": {
     "start": "nodemon server/server.js",
+    "build": "webpack -d",
     "dev:react": "webpack -d --watch",
-    "test": "jest database-mongodb/__test__/database-insert.test.js",
-    "eslnt": "eslint --ignore-path .gitignore . --fix",
+    "test": "jest --detectOpenHandles --coverage --forceExit",
+    "eslint": "eslint --ignore-path .gitignore . --fix",
     "db:setup": "node database-mongodb/seed.js"
   },
+  "keywords": [
+    "Nike",
+    "Jordan",
+    "shoes",
+    "images"
+  ],
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.17.2",
     "bootstrap": "^3.3.7",
-    "express": "^4.15.4",
+    "express": "^4.16.4",
     "jquery": "^3.2.1",
     "moment": "^2.19.2",
     "mongoose": "^4.11.6",
     "mysql": "^2.14.1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
@@ -33,6 +44,8 @@
     "babel-loader": "^6.3.2",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "eslint": "^5.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
@@ -40,6 +53,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-cli": "^3.1.2"
   }
 }

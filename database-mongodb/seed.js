@@ -1,10 +1,12 @@
-const db = require('./index.js');
+// const db = require('./index.js');
+const mongoose = require('mongoose');
+
 const ShoeGroup = require('./ShoeGroup.js');
 
 /* Connect to the DB */
-mongoose.connect('mongodb://localhost/shoegroups',function(){
-    /* Drop the DB */
-    mongoose.connection.db.dropDatabase();
+mongoose.connect('mongodb://localhost/shoegroups', () => {
+  /* Drop the DB */
+  mongoose.connection.db.dropDatabase();
 });
 
 const shoeIDs = ['310805-408', '310806-408', '310806-002', '305381-113', '852542-306', '554724-062', '554724-113', '554724-071', '554724-610', '554724-050',
@@ -19,16 +21,16 @@ const shoeIDs = ['310805-408', '310806-408', '310806-002', '305381-113', '852542
   'AJ7984-001', 'AO2649-001', 'AO2649-301', 'AO2649-023', 'AO2649-007', 'AO2649-002', 'AJ7990-003', 'AJ7990-001', 'AJ7990-301', 'AJ7990-006',
   'AA2517-600', 'AA2517-005', 'AA2517-002', 'AA2517-062', 'AA2517-023', 'AA2517-004', '684915-106', 'AH8109-003', 'AH8109-600', 'AH8109-100',
   'AH8109-002', 'AO1561-003', 'AO1561-117', 'AO1561-010', 'AO1561-011', 'AO1561-107', 'AO1560-010', 'AO1560-117', 'AA1253-105', 'AA1253-400',
-  'AQ9084-063', 'AQ9084-006', 'AQ9084-100', 'AQ9084-300', 'AQ9084-010'
+  'AQ9084-063', 'AQ9084-006', 'AQ9084-100', 'AQ9084-300', 'AQ9084-010',
 ];
 
 
-const names = [ 
+const names = [
   'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10',
   'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10',
   'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10',
   'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10',
-  'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10'
+  'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Mid', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Moto', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+1+Retro+High+Premium', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10', 'Air+Jordan+Retro+10',
 ];
 
 
@@ -164,7 +166,7 @@ const imageUrls = [
   'https://s3.amazonaws.com/warp-v/images/BQ7930_400.jpeg',
 ];
 
-const productGroups = [ 
+const productGroups = [
   'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan Retro', 'Air Jordan Retro', 'Air Jordan Retro', 'Air Jordan Retro', 'Air Jordan Retro',
 
   'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan Retro', 'Air Jordan Retro', 'Air Jordan Retro', 'Air Jordan Retro', 'Air Jordan Retro',
@@ -189,7 +191,7 @@ const searchStrs = [
   'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Mid', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan Moto', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan High Premium', 'Air Jordan Retro', 'Air Jordan Retro', 'Air Jordan Retro', 'Air Jordan Retro', 'Air Jordan Retro',
 ];
 
-const prices = [ 
+const prices = [
   '$150', '$180', '$190', '$210', '$100', '$241', '$345', '$578', '$499', '$211', '$299', '$399', '$259', '$150', '$180', '$190', '$210', '$100', '$241', '$345', '$578', '$499', '$211', '$299', '$399',
   '$150', '$180', '$190', '$210', '$100', '$241', '$345', '$578', '$499', '$211', '$299', '$399', '$259', '$150', '$180', '$190', '$210', '$100', '$241', '$345', '$578', '$499', '$211', '$299', '$399',
   '$150', '$180', '$190', '$210', '$100', '$241', '$345', '$578', '$499', '$211', '$299', '$399', '$259', '$150', '$180', '$190', '$210', '$100', '$241', '$345', '$578', '$499', '$211', '$299', '$399',
@@ -197,10 +199,17 @@ const prices = [
   '$150', '$180', '$190', '$210', '$100', '$241', '$345', '$578', '$499', '$211', '$299', '$399', '$259', '$150', '$180', '$190', '$210', '$100', '$241', '$345', '$578', '$499', '$211', '$299', '$399',
 ];
 
-var shoeGroupArr = [];
-for (var i = 0; i < shoeIDs.length; i++) {
-  var id = Math.floor(Math.random() * shoeIDs.length);
-  shoeGroupArr.push({shoeID: shoeIDs[i], name: names[i], imageUrls: imageUrls[id], productGroup: productGroups[i], searchStr: searchStrs[i], price: prices[i]});
+const shoeGroupArr = [];
+for (let i = 0; i < shoeIDs.length; i += 1) {
+  const id = Math.floor(Math.random() * shoeIDs.length);
+  shoeGroupArr.push({
+    shoeID: shoeIDs[i],
+    name: names[i],
+    imageUrls: imageUrls[id],
+    productGroup: productGroups[i],
+    searchStr: searchStrs[i],
+    price: prices[i],
+  });
 }
 
 console.log(shoeGroupArr);

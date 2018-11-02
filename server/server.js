@@ -1,9 +1,9 @@
 const express = require('express');
 // const morgan = require('morgan');
+const path = require('path');
 const db = require('../database-mongodb/index.js');
 const ShoeGroup = require('../database-mongodb/ShoeGroup.js');
 
-const path = require('path');
 const app = express();
 const port = process.env.PORT || 3002;
 
@@ -12,16 +12,26 @@ const port = process.env.PORT || 3002;
 app.use(express.static(path.join(__dirname, '../public')));
 
 
-//server routes
-
+// server routes to verify all the data
 app.get('/shoes/:shoeID', ({ params }, res) => {
-  const id = params.shoeID;
-  const shoeID = id.substring(1, id.length);
-  Shoe.find({ shoeID }, (err, shoe) => {
+  const shoeID = params.shoeID;
+  ShoeGroup.ShoeGroup.find(shoeID, (err, shoe) => {
     if (err) {
       console.log(err);
     }
+    console.log(shoe);
     res.send(shoe);
+  });
+});
+
+// server routes for search or query
+app.get('/search/:text', ({ params }, res) => {
+  const query = params.text;
+  ShoeGroup.searchShoes(query, (err, results) => {
+    if (err) {
+      console.log(err);
+    }
+    res.send(results);
   });
 });
 

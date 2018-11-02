@@ -1,3 +1,374 @@
+
+/*//////*/
+.gnav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    font-size: 16px;
+    line-height: 1.5em;
+    width: 100%;
+    min-width: 768px;
+}
+
+.gnav * {
+  box-sizing: border-box !important;
+}
+
+.gnav-bar {
+	display: table;
+    width: 100%;
+    padding: 0 0 0 31px;
+    background-color: white;
+    border-bottom: 1px solid #E5E5E5;
+    min-width: 768px;
+    top:300px;
+}
+
+.gnav-bar>* {
+    display: table-cell;
+    height: 68px;
+}
+
+.gnav-bar--home {
+    text-align: center;
+    vertical-align: middle;
+    width: 58px;
+}
+
+.gnav-bar--sections {
+    background-color: white;
+    text-align: center;
+    padding-left: 166px;
+    font-size: 0;
+}
+
+.gnav-bar--sections .gnav-bar--section {
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+
+.gnav-bar--sections a.gnav-bar--section-tab {
+    height: 66px;
+    line-height: 68px;
+}
+
+.search-result-main {
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    width: 600px;
+}
+
+.search-result-container {
+    width:50%;
+    display: inline-block; 
+}
+
+.gnav-member-bar a, .gnav-bar a {
+    color: #8D8D8D;
+    text-decoration: none;
+    outline: 0;
+}
+
+.nsg-font-family--platform {
+    font-style: normal;
+}
+
+.nsg-font-family--platform, .nsg-font-family--platform-i {
+    font-weight: 400;
+    font-family: 675334, Helvetica, Arial, sans-serif;
+}
+
+.gnav-bar--sections a.gnav-bar--section-tab {
+    height: 66px;
+    line-height: 68px;
+}
+
+.gnav-bar--facet-label {
+	color: rgb(17, 17, 17);
+}
+
+.gnav-bar--sections a {
+    color: #111;
+    display: inline-block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.show .css-qty32y, .show [data-css-qty32y] {
+    display: block;
+}
+
+.css-qty32y, [data-css-qty32y] {
+    height: auto;
+    display: none;
+    position: relative;
+    background: transparent;
+}
+
+
+@media (max-width: 1023px)
+.gnav-bar--search .vs-results {
+    position: fixed;
+    top: 300px;
+    left: 0;
+}
+
+@media (min-width: 1024px)
+<style>…</style>
+.css-1owpec4, [data-css-1owpec4] {
+    right: 0px;
+    clear: both;
+    width: 100vw;
+    min-width: 1024px;
+    min-height: 540px;
+    height: initial;
+    position: absolute;
+    pointer-events: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px)
+<style>…</style>
+.css-qty32y, [data-css-qty32y] {
+    z-index: 10;
+    display: block;
+}
+
+@media (min-width: 640px)
+ <style>…</style>
+	.css-57nyqw.mod-ncss-input, [data-css-57nyqw].mod-ncss-input {
+  min-height: 40px;
+}
+
+.ncss .u-rounded {
+    border-radius: 2px;
+}
+
+.ncss .pl12-sm {
+    padding-left: 48px;
+}
+
+.ncss .pr8-sm {
+    padding-right: 32px;
+}
+
+.ncss .pb2-sm {
+    padding-bottom: 8px;
+}
+
+.ncss .pt2-sm {
+    padding-top: 8px;
+}
+
+.ncss input, .ncss textarea {
+    border: 0;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.css-57nyqw, [data-css-57nyqw] {
+    position: relative;
+    vertical-align: top;
+    min-height: 48px;
+    width: 100%;
+    box-shadow: rgb(221, 221, 221) 0px 1px 0px 0px inset, rgb(221, 221, 221) -1px 0px 0px 0px inset, rgb(221, 221, 221) 0px -1px 0px 0px inset, rgb(221, 221, 221) 1px 0px 0px 0px inset;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 11px system-ui;
+}
+
+
+
+.show .css-qty32y, .show [data-css-qty32y] {
+    display: block;
+}
+
+
+@media (min-width: 1024px)
+<style>…</style>
+.css-qty32y, [data-css-qty32y] {
+    z-index: 10;
+    display: block;
+}
+
+.css-qty32y, [data-css-qty32y] {
+    height: auto;
+    display: none;
+    position: relative;
+    background: transparent;
+}
+
+
+.ncss .z1 {
+    z-index: 1;
+}
+
+.gnav-bar--search .vs-results {
+    overflow: hidden;
+    right: 0;
+    top: 15px;
+}
+
+@media (min-width: 1024px)
+<style>…</style>
+.css-1owpec4, [data-css-1owpec4] {
+    right: 0px;
+    clear: both;
+    width: 100vw;
+    min-width: 1024px;
+    min-height: 540px;
+    height: initial;
+    position: absolute;
+    pointer-events: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+
+.css-2zyvk4 .show .results__animation-wrapper, [data-css-2zyvk4] .show .results__animation-wrapper {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+@media (min-width: 1024px)
+<style>…</style>
+.css-2zyvk4 .results__animation-wrapper, [data-css-2zyvk4] .results__animation-wrapper {
+    transform: translate(0px, -100%);
+}
+.css-2zyvk4 .results__animation-wrapper, [data-css-2zyvk4] .results__animation-wrapper {
+    opacity: 0;
+    transform: translate(0px, -10px);
+    transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75) 0s;
+}
+.css-1d3ktrz, [data-css-1d3ktrz] {
+    height: 100%;
+    pointer-events: all;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    flex-direction: row-reverse;
+}
+.css-1d3ktrz, [data-css-1d3ktrz] {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.searchPlaceHolder {
+	box-sizing: border-box;
+	display: table-cell;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	height: 68px;
+	position: relative;
+	text-size-adjust: 100%;
+	vertical-align: middle;
+	width: 224px;
+}
+
+/*model css*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/*model css*/
+
+/*old code*/
+
 .toolbar{
 	position: fixed;
 	width: 100%;
@@ -7,6 +378,12 @@
 	height: 50px;
 }
 
+.search-bar {
+    display: flex;
+	height: 70%;
+	align-items: center;
+	padding: 0;
+}
 .toolbar_navigation {
 	display: flex;
 	height: 100%;

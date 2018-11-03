@@ -8,3 +8,13 @@ public/bundle.js
 =======
 bundle.js
 >>>>>>> 0761d5651462bb00de8b5c49e4263487fd1db399
+
+# jest coverage folder
+
+coverage/
+
+# webpack/package
+webpack.config.js
+package-lock.json
+
+

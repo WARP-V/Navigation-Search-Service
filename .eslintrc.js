@@ -4,6 +4,7 @@ module.exports = {
     // Rules here will override the 'hackreactor' configuration
     // http://eslint.org/docs/rules/
   },
+  "parser": "babel-eslint",
   "plugins": [
     "react",
     "jsx-a11y",

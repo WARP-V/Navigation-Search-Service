@@ -26,6 +26,7 @@ app.get('/shoes/:shoeID', ({ params }, res) => {
 
 // server routes for search or query
 app.get('/search/:text', ({ params }, res) => {
+  console.log('hello world');
   const query = params.text;
   ShoeGroup.searchShoes(query, (err, results) => {
     if (err) {

@@ -19,12 +19,13 @@
 
 ## Usage
 
-> The Air Jordan site is for you to view various types of shoes in different categories and order them.
+> The Air Jordan online store is for you to view various types of shoes in different categories and select the suitable ones with all the details for your order.
 > The main menu goes across various categories the company is going to sell.
 > You can view the individual product in detail with various types of pictures for real online experience.
-> One can search the shoes and the site will list top 6 products with prhotgraphs of shoes that you may be interested to buy.
-> There is carousal displayed continously on the site that can be benefecial to see other related types of shoes visually
+> One can search the shoes and the site will list top 6 products with photographs of shoes that you may be interested to buy.
+> There is carousal displayed continuously on the site that can be beneficial to see other related types of shoes visually
 > Happy Shopping!!!
+
 
 ## Requirements
 

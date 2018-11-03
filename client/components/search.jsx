@@ -4,7 +4,6 @@ import ShoeList from './ShoeList.jsx';
 const axios = require('axios');
 
 class Search extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +14,6 @@ class Search extends React.Component {
   }
   
   handleInputChange(e) {
-    // this.props.handleSearchInputChange(e.target.value);
     this.setState({
       value: e.target.value
     }); 
@@ -30,9 +28,7 @@ class Search extends React.Component {
         }
       })
       .then((resp) => {
-        // console.log("resp", resp);
         const shoes = resp.data;
-        console.log("shoes", shoes);
         this.setState( { shoes } );
 
       })

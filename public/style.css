@@ -1,12 +1,155 @@
 
-/*//////*/
+/*css style for Air Jordon*/
+.sub-nav {
+   top:100px;
+   display: block;
+    position: fixed;
+    left: 50px;
+    top: 0;
+    z-index: 1001;
+}
+
+.sub-nav span {
+    position: fixed;
+    left: 340px;
+    top: 30px;
+
+}
+
+.sub-nav ul {
+    display: none;
+}
+
+.sub-nav:hover ul {
+    position: fixed;
+    display: block; 
+    top:70px;
+    left:260px;
+    z-index: 1002;
+}
+
+.sub-nav1 {
+   top:100px;
+   display: block;
+    position: fixed;
+    left: 200;
+    top: 0;
+    z-index: 1001;
+}
+
+.sub-nav1 span {
+    position: fixed;
+    left: 410px;
+    top: 30px;
+
+}
+
+.sub-nav1 ul {
+    display: none;
+}
+
+.sub-nav1:hover ul {
+    position: fixed;
+    display: block; 
+    top:70px;
+    left:340px;
+    z-index: 1002;
+}
+
+.sub-nav2 {
+   top:100px;
+   display: block;
+    position: fixed;
+    left: 200px;
+    top: 0;
+    z-index: 1001;
+}
+
+.sub-nav2 span {
+    position: fixed;
+    left: 500px;
+    top: 30px;
+
+}
+
+.sub-nav2 ul {
+    display: none;
+}
+
+.sub-nav2:hover ul {
+    position: fixed;
+    display: block; 
+    top:70px;
+    left:420px;
+    z-index: 1002;
+}
+
+.sub-nav3 {
+   top:100px;
+   display: block;
+    position: fixed;
+    left: 300px;
+    top: 0;
+    z-index: 1001;
+}
+
+.sub-nav3 span {
+    position: fixed;
+    left: 580px;
+    top: 30px;
+
+}
+
+.sub-nav3 ul {
+    display: none;
+}
+
+.sub-nav3:hover ul {
+    position: fixed;
+    display: block; 
+    top:70px;
+    left:540px;
+    z-index: 1002;
+}
+
+
+.sub-nav4 {
+   top:100px;
+   display: block;
+    position: fixed;
+    left: 50px;
+    top: 0;
+    z-index: 1001;
+}
+
+.sub-nav4 span {
+    position: fixed;
+    left: 700px;
+    top: 30px;
+
+}
+
+.sub-nav4 ul {
+    display: none;
+}
+
+.sub-nav4:hover ul {
+    position: fixed;
+    display: block; 
+    top:70px;
+    left:640px;
+    z-index: 1002;
+}
+
+
+
 .gnav {
     position: fixed;
     left: 0;
     top: 0;
     z-index: 1000;
     font-size: 16px;
-    line-height: 1.5em;
+    line-height: 2em;
     width: 100%;
     min-width: 768px;
 }
@@ -39,7 +182,7 @@
 .gnav-bar--sections {
     background-color: white;
     text-align: center;
-    padding-left: 166px;
+    padding-left: 90px;
     font-size: 0;
 }
 
@@ -47,7 +190,7 @@
     display: inline-block;
     border-bottom: 2px solid transparent;
     padding: 0 20px;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 
@@ -201,6 +344,7 @@ input, textarea, select, button {
     text-align: start;
     margin: 0em;
     font: 400 11px system-ui;
+    width: 200px;
 }
 
 
@@ -418,64 +562,9 @@ input, textarea, select, button {
 	font-family: Helvetica, Arial, sans-serif;
 
 }
-/*nav {
-	background-color: grey;
-	overflow: hidden;
-	padding: 1em;
 
-	a {
-		color: #FFF;
-	}
-
-	a:visited {
-		color: #FFF;
-	}
-
-	border-bottom: 1px solid #000;
-
-	.navWide {
-		display: none;
-		margin: 0 auto;
-
-		.wideDiv {
-			text-align: center;
-
-			a {
-				text-decoration: none;
-				display: inline-block;
-				// Adjust padding to increase/decrease the space between links.
-				padding: 0 2em;
-			}
-		}
-	}
-
-	// Navbar is set to default with the "hamburger" and links on the left
-	// side of the screen. To move to the right of the screen, simply
-	// change the three "float: Left;" references to read "float: right;".
-	.navNarrow {
-
-		i {
-			float: left;
-			cursor: pointer;
-			color: #FFF;
-		}
-
-		.narrowLinks {
-			display: none;
-
-			a {
-				text-decoration: none;
-				display: block;
-				float: left;
-				clear: left;
-				padding: 0.5em 0;
-			}
-		}
-	}
-}*/
-
-// Adjust breakpoint as desired to select when the "hamburger" menu is
-// replaced by just the links.
+/*Adjust breakpoint as desired to select when the "hamburger" menu is
+/*replaced by just the links.*/
 @media (min-width: 480px) {
 	
 	nav {

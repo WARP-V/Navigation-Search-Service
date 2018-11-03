@@ -1,10 +1,9 @@
 import React from 'react';
 import Search from './Search.jsx';
 
-const axios = require('axios');
-
 //props is an object with key List
-const ShoeList = (props) => (
+const ShoeList = (props) => {
+	return (
   <div className="search-result-main">
     {props.shoes.map(shoe => (
       <div className="search-result-container" key={ shoe.shoeID }>
@@ -31,7 +30,6 @@ const ShoeList = (props) => (
     )}
   </div>
 );
+}
 
 export default ShoeList;
-
-		      	  	  	// <h4 className="visual-results__title ncss-brand u-uppercase text-color-grey fs16-sm m0-sm mb4-sm">TOP SUGGESTIONS</h4>

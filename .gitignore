@@ -14,7 +14,6 @@ bundle.js
 coverage/
 
 # webpack/package
-webpack.config.js
 package-lock.json
 
 

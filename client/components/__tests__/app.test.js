@@ -5,8 +5,7 @@ import Enzyme, {
 } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import App from '../App.jsx';
-import Toolbar from '../Toolbar.jsx';
+import App from '../App';
 
 Enzyme.configure({ adapter: new Adapter() });
 

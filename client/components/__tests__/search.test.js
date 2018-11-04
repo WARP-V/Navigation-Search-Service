@@ -5,7 +5,7 @@ import Enzyme, {
 } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import Search from '../Search.jsx';
+import Search from '../Search';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -24,7 +24,7 @@ describe('<Search /> Functionality', () => {
     expect(wrapper.state('shoes')).toEqual(dummyShoes);
   });
   test('should call onChange property with input value', () => {
-   	const objectValue = { target: { value: 'air jordan' } };
+    const objectValue = { target: { value: 'air jordan' } };
     const wrapper = mount(<Search />);
     wrapper.find('input').simulate('change', objectValue);
     expect(wrapper.state('value')).toEqual('air jordan');

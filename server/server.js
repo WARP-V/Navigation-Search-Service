@@ -1,7 +1,7 @@
 const express = require('express');
 // const morgan = require('morgan');
 const path = require('path');
-// const db = require('../database-mongodb/index.js');
+require('../database-mongodb/index.js');
 const ShoeGroup = require('../database-mongodb/ShoeGroup.js');
 
 const app = express();

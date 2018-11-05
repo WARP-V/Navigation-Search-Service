@@ -24,4 +24,9 @@ module.exports = {
       },
     ],
   },
+  externals: {
+    'react/addons': true,
+    'react/lib/ReactContext': true,
+    'react/lib/ExecutionEnvironment': true,
+  },
 };

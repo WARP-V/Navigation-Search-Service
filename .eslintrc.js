@@ -1,4 +1,11 @@
 module.exports = {
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["client"]
+      }
+    }
+  },
   "extends": "airbnb",
   rules: {
     // Rules here will override the 'hackreactor' configuration

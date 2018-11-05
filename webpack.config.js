@@ -9,6 +9,9 @@ module.exports = {
     filename: 'bundle.js',
     path: DIST_DIR,
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     loaders: [
       {
@@ -20,5 +23,10 @@ module.exports = {
         },
       },
     ],
+  },
+  externals: {
+    'react/addons': true,
+    'react/lib/ReactContext': true,
+    'react/lib/ExecutionEnvironment': true,
   },
 };

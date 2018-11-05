@@ -22,6 +22,14 @@ module.exports = {
           presets: ['react', 'es2015'],
         },
       },
+      {
+        test: /\.css$/,
+        include: SRC_DIR,
+        use: [ 
+         { loader: 'style-loader' },
+         { loader: 'css-loader'},
+        ] 
+      }
     ],
   },
   externals: {

@@ -5,7 +5,7 @@ import Enzyme, {
 } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import Search from '../Search.jsx';
+import Search from '../Search';
 
 Enzyme.configure({ adapter: new Adapter() });
 

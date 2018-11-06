@@ -19,14 +19,13 @@ app.get('/shoes/:shoeID', ({ params }, res) => {
     if (err) {
       console.log(err);
     }
-    console.log(shoe);
+    // console.log(shoe);
     res.send(shoe);
   });
 });
 
 // server routes for search or query
 app.get('/search/:text', ({ params }, res) => {
-  console.log('hello world');
   const query = params.text;
   ShoeGroup.searchShoes(query, (err, results) => {
     if (err) {

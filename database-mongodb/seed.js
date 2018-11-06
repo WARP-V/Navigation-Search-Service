@@ -3,11 +3,16 @@ const mongoose = require('mongoose');
 
 const ShoeGroup = require('./ShoeGroup.js');
 
-/* Connect to the DB */
+
+// Connect to the DB 
 mongoose.connect('mongodb://localhost/shoegroups', () => {
-  /* Drop the DB */
+  // Drop the DB 
   mongoose.connection.db.dropDatabase();
 });
+
+ShoeGroup.ShoeGroup.deleteMany({}, ()=> {
+  console.log("Delete =======> deleting old shoe records deleted");
+})
 
 const shoeIDs = ['310805-408', '310806-408', '310806-002', '305381-113', '852542-306', '554724-062', '554724-113', '554724-071', '554724-610', '554724-050',
   '554724-109', 'AR4491-001', 'AR4491-700', 'AV3922-601', 'AV3922-348', 'AV3922-001', 'AT3146-001', 'AV1200-600', 'AV1200-007', 'AV1200-008',
@@ -212,10 +217,10 @@ for (let i = 0; i < shoeIDs.length; i += 1) {
   });
 }
 
-console.log(shoeGroupArr);
+// console.log(ShoeGroup);
 
-ShoeGroup.insertMany(shoeGroupArr, (err, docs) => {
-  console.log(docs);
+ShoeGroup.ShoeGroup.insertMany(shoeGroupArr, (err, docs) => {
+  // console.log(docs);
   if (err) {
     console.log(err);
   } else {

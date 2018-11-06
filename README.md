@@ -44,6 +44,8 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
-[] seed data functionality
-[] run-> npm run db:setup
+[] run mongod
+[] run mongo
+[] npm run dev:react
+[] seed data functionality -> npm run db:setup
 [] npm install --save-dev jest //installing jest

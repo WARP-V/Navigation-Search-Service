@@ -1,11 +1,11 @@
 /* eslint react/jsx-filename-extension: [0] */
 
 import Enzyme, {
-  shallow, mount, render,
+  shallow,
 } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import Toolbar from '../Toolbar.jsx';
+import Toolbar from '../Toolbar';
 
 Enzyme.configure({ adapter: new Adapter() });
 

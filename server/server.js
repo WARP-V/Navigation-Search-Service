@@ -1,7 +1,7 @@
 const express = require('express');
 // const morgan = require('morgan');
 const path = require('path');
-const db = require('../database-mongodb/index.js');
+require('../database-mongodb/index.js');
 const ShoeGroup = require('../database-mongodb/ShoeGroup.js');
 
 const app = express();
@@ -14,7 +14,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // server routes to verify all the data
 app.get('/shoes/:shoeID', ({ params }, res) => {
-  const shoeID = params.shoeID;
+  // const shoeID = params.shoeID;
+  const { shoeID } = params;
   ShoeGroup.ShoeGroup.find(shoeID, (err, shoe) => {
     if (err) {
       console.log(err);

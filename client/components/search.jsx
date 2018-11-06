@@ -1,6 +1,6 @@
 import React from 'react';
-import App from './App.jsx';
-import ShoeList from './ShoeList.jsx';
+import App from './App';
+import ShoeList from './ShoeList';
 const axios = require('axios');
 
 class Search extends React.Component {

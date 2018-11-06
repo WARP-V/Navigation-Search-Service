@@ -2,12 +2,11 @@
 
 
 import Enzyme, {
-  shallow, mount, render,
+  shallow,
 } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import ShoeList from '../ShoeList.jsx';
-import Search from '../Search.jsx';
+import ShoeList from '../ShoeList';
 
 Enzyme.configure({ adapter: new Adapter() });
 

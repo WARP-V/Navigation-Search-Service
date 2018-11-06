@@ -47,5 +47,5 @@ npm install
 [] run mongod
 [] run mongo
 [] npm run dev:react
-[] seed data functionality -> npm run db:setup
+[] seed data functionality -> npm run db:setup (pleae verify db is seeded, run two times)
 [] npm install --save-dev jest //installing jest

@@ -1,15 +1,17 @@
 *.log
-.DS_Store
-bower_components
-node_modules
-example
-# <<<<<<< HEAD
-# public/bundle.js
-# =======
-# bundle.js
-# >>>>>>> 0761d5651462bb00de8b5c49e4263487fd1db399
 
-# jest coverage folder
+.DS_Store
+
+bower_components
+
+node_modules
+
+example
+
+public/bundle.js
+bundle.js
+
+jest coverage folder
 
 coverage/
 

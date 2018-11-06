@@ -47,5 +47,14 @@ npm install
 [] run mongod
 [] run mongo
 [] npm run dev:react
-[] seed data functionality -> npm run db:setup (pleae verify db is seeded, run two times)
+[] seed data functionality -> npm run db:setup (pleae verify db is seeded, run this command again if database mot seeded)
+
+##for database index
+# on mongo terminal
+[] use shoegroupDB
+[] show collections; to view collection shoegroups
+[] db.shoegroups.count(); for total number of docs
+[] db.shoegroups.createIndex({ name: "text", productGroup: "text", searchStr: "text" });
+
+## to run tests
 [] npm install --save-dev jest //installing jest

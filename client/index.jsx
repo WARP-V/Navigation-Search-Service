@@ -4,4 +4,6 @@ import App from './components/App.jsx';
 
 require('./style.css');
 
-ReactDOM.render(<App />, document.getElementById('app'));
+window.Navigation = App;
+
+// ReactDOM.render(<App />, document.getElementById('app'));

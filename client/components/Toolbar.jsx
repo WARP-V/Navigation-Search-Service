@@ -5,13 +5,14 @@ const toolbar = props => (
 		<nav className="gnav">
 		  <div className="gnav-bar">
 			<div className="gnav-bar--home">  
-			   <a href="/"> LOGO </a>
+			   <a href="/"> AirJordan </a>
 			</div>
 			<ul className="gnav-bar--sections">
 				<li className="gnav-bar--sections gnav-bar--section">
 				  <a  className="gnav-bar--sections-tab" href="/" >
 				  	<span className="nsg-font-family--platform gnav-bar--facet-label"> MEN </span>
 				  </a> 
+
 				  <div className="sub-nav">
 				  	<span className="sub-nav-header"> Men Shoes 
 				  	  <ul>

@@ -15,9 +15,15 @@ const ShoeList = (props) => {
 		      	  	  <div className="visual-results__items" data-css-vi3riu>
 		      	  	  	<div className="search-result-container-item">
 		      	  	  	  <ul className="pl0-sm mt-3-sm mb-3-sm mb3-lg">
-		      	  	  	    <li> <img width="50" height="50" src={shoe.imageUrls[0]} /> 
-		      	  	  	    	{ shoe.name } 
-		      	  	  		</li> 
+		      	  	  	    <li> 
+		      	  	  	      <img width="120" height="70" src={shoe.imageUrls[0]} /> 
+		      	            </li> 
+		      	  	  	        <span> { shoe.name } </span>
+		      	  	  		<li>
+		      	  	  	    	<span> Price: { shoe.price } </span>
+		      	  	  		</li>
+		      	  	  		<li>
+		      	  	  		</li>
 		      	  	  	  </ul>
 		      	  	  	</div>
 		      	  	  </div>

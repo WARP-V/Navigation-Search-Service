@@ -4,7 +4,7 @@ import Toolbar from './Toolbar.jsx';
 
   const App = (props) => {
     return (
-      <div>
+      <div id="navigation">
         <Toolbar />
       </div>  
     );

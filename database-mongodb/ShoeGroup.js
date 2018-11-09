@@ -16,6 +16,8 @@ const shoeGroupSchema = new mongoose.Schema({
   timestamps: true,
 });
 
+shoeGroupSchema.index({ name: "text", productGroup: "text", searchStr: "text" });
+
 const ShoeGroup = mongoose.model('ShoeGroup', shoeGroupSchema);
 
 const retrieveShoe = (shoeID, callback) => {

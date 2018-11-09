@@ -5,7 +5,7 @@ const ShoeGroup = require('./ShoeGroup.js');
 
 
 // Connect to the DB
-mongoose.connect('mongodb://localhost/shoegroups', () => {
+mongoose.connect('mongodb://mongo/shoegroups', () => {
   // Drop the DB
   mongoose.connection.db.dropDatabase();
 });
@@ -226,5 +226,5 @@ ShoeGroup.ShoeGroup.insertMany(shoeGroupArr, (err) => {
   } else {
     console.log('FINISHED SEEDING DATABASE');
   }
-  process.exit();
+  // process.exit();
 });

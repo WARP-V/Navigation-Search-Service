@@ -6,10 +6,9 @@ WORKDIR /src/app
 
 COPY . /src/app
 
-RUN
-npm install -P
-npm run build
-npm run db:setup
+RUN npm install -P
+RUN npm run build
+RUN npm run db:setup
 
 EXPOSE 3002
 

@@ -226,5 +226,5 @@ ShoeGroup.ShoeGroup.insertMany(shoeGroupArr, (err) => {
   } else {
     console.log('FINISHED SEEDING DATABASE');
   }
-  // process.exit();
+  process.exit();
 });

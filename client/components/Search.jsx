@@ -21,7 +21,6 @@ class Search extends React.Component {
   }
 
   searchShoes(query) {  
-    console.log(query);
     axios.get(`/${query}/Search`, {
         params: {
           text: query
